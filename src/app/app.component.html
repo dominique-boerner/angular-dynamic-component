@@ -1,0 +1,20 @@
+<app-card title="Hallo Welt!" text="Lorem ipsum"></app-card>
+
+<app-card [body]="body">
+  <ng-template #body>
+    <img
+      src="https://images.pexels.com/photos/12328375/pexels-photo-12328375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      style="width: 100%; height: 100%"
+  /></ng-template>
+</app-card>
+
+<div style="display: flex; flex-direction: column">
+  <app-tag icon="✔️" text="Aktiv"></app-tag>
+
+  <app-tag text="Aktiv" [append]="append">
+    <ng-template #append>
+      <input type="checkbox" checked />
+      <!-- kann wiederrum ein eigenes element sein, z. B. "visibility-toogle" -->
+    </ng-template>
+  </app-tag>
+</div>

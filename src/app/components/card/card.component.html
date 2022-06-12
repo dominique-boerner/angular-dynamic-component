@@ -1,0 +1,13 @@
+<div
+  style="background: white; box-shadow: 1px 1px 8px 4px rgba(0,0,0,0.2); border-radius: 2px; height: 300px; width: 200px; overflow: hidden; margin-top: 1rem;"
+>
+  <app-card-head *ngIf="!head" [title]="title"></app-card-head>
+  <ng-container *ngIf="head">
+    <ng-container *ngTemplateOutlet="head"></ng-container>
+  </ng-container>
+
+  <app-card-body *ngIf="!body"></app-card-body>
+  <ng-container *ngIf="body">
+    <ng-container *ngTemplateOutlet="body"></ng-container>
+  </ng-container>
+</div>
